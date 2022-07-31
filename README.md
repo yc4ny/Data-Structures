@@ -1,5 +1,5 @@
 # CS 2150 Program and Data Representation
-A repository of all the lab assignments with my solutions for CS 2150: Program and Data Representation course at the University of Virginia 
+A repository of all the lab assignments with solutions for CS 2150: Program and Data Representation course at the University of Virginia 
 
 Lab 1: Introduction to C++  
 Lab 2: Linked Lists  
