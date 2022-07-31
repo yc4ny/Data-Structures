@@ -1,5 +1,5 @@
 # CS 2150 Program and Data Representation
-Solutions for Program and Data Representation course at the University of Virginia. 
+Solutions for Program and Data Representation course at the University of Virginia 
 
 Lab 1: Introduction to C++  
 Lab 2: Linked Lists  
