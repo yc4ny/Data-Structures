@@ -1,0 +1,28 @@
+C009 000	jmp	start	skip around the variables
+0000 001	dw	0	int a
+0000 002	dw	0	int b
+0000 003	dw	0	int c
+0000 004	Extra Space
+0000 005	Extra Space
+0000 006	Extra Space
+0000 007	Extra Space
+0000 008	Extra Space
+1000 009 start	read		input for a
+4001 00A 	store	a	a = acc
+1000 00B	read		input for b
+4002 00C	store	b	b = acc
+1000 00D	read		input for c
+4003 00E	store	c	c = acc
+3001 00F	load	a	acc = a
+5002 010	add	b	acc += b
+5003 011	add	c	acc += c
+1800 012	print		prints out sum of a+b+c
+D015 013	jmpe		if(acc == 0):goto end
+C009 014	jmp	start	goes back to start if previous not true	
+3001 015	load	a	acc = a
+1800 016	print		prints out a
+3002 017	load	b	
+1800 018	print		prints out b
+3003 019	load	c	
+1800 01A	print		prints out c
+0000 01B	halt		ends program

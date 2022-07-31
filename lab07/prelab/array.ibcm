@@ -1,0 +1,40 @@
+C00A	00		jmp	start
+0000	01	i	dw	0		
+0008	02	size	dw	8	size = 8
+0020	03	array	dw	20	int array[]
+0000	04	max	dw	0	max = 0
+3000	05	loadit	dw	3000
+0000	06	current	dw	0	current = 0
+0001	07	one	dw	1
+0000	08	Extra Space
+0000	09	Extra Space
+3002	0A	start	load	size	
+6001	0B		sub		acc = size - 1
+E01D	0C		jmpl	endloop	if(acc < 0): goto endloop	
+D01D	0D		jmpe	endloop if(acc == 0): goto endloop
+3005	0E		load	loadit	loading array[i]
+5003	0F		add	array[]
+5001	10		add	i
+4013	11		store	doit	store accessing array element
+4006	12		store	current store current array element 
+0000	13	doit	dw	0	loading array[i]
+6004	14		sub	max	acc = array[i] - max
+E019	15		jmpl	endl	if(array[i] <= max): goto endl
+D019	16		jmpe	endl	if(array[i] == max): goto endl
+5004	17		add	max	acc = max + acc
+4004	18		store	max	max = acc
+3001	19	endl	load	i	
+5007	1A		add	1	i++
+4001	1B		store	i	i = acc
+C00A	1C		jmp	start
+3004	1D	endloop	load	max	
+1800	1E		printH	printing max onto screen
+0000	1F	array[]	dw	0	 int array[]
+0000	20	array0	dw	0	 array[0] = 0
+0020	21	array1	dw	20	 array[1] = 20
+0021	22	array2	dw	21       array[2] = 21
+001A	23	array3	dw	1A       array[3] = 1A
+0063	24	array4	dw	63       array[4] = 63
+0005	25	array5	dw	5        array[5] = 5
+0032	26	array6	dw	32       array[6] = 32
+0042	27	array7	dw	42       array[7] = 42

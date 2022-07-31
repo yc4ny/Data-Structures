@@ -1,0 +1,80 @@
+C005	00	jmp	initalize j
+0000	01	dw	int i = 0
+0005	02	dw	size = 5
+0001	03	dw	one
+0000	04	dw	int j = 0 
+3002	05	load	acc = size
+6003	06	sub	acc = acc - 1
+4004	07	store	j = acc
+C00F	08	jmp	start
+004B	09	dw	int a[]	
+0000	0A	dw	temp = 0
+3000	0B	ldit
+4000	0C	storeit	
+0000	0D	dw	previous term
+0000	0E	dw	current term
+3002	0F	load	size
+6001	10	sub	acc = size - i
+E046	11	jmpl	if(acc < 0)
+D046	12	jmpe	if(acc == 0)
+3004	13	load	acc = j
+6001	14	sub	acc = j - 1
+E042	15	jmpl	if(acc < 0)
+D042	16	jmpe	if(acc == 0)
+300B	17	load	load a[]
+5009	18	add	a[]	
+5004	19	add	j
+401B	1A	store	loadit
+0000	1B	dw	current
+400E	1C	store	current
+300B	1D	load	load it
+5009	1E	add	a[]
+5004	1F	add	j
+6003	20	sub	a[j-1]
+4022	21	store	loadit
+0000	22	dw	prev
+400D	23	store	previous
+300E	24	load	current
+600D	25	sub	a[j] - a[j-1]
+E02B	26	jmpl	
+3004	27	load	acc = j
+6003	28	sub	acc = j - 1
+4004	29	store	j = acc
+C015	2A	jmp	while(j > i)
+300E	2B	load	current
+400A	2C	store	temp
+300D	2D	load	previous
+400E	2E	store	current
+300A	2F	load	temp
+400D	30	store	previuos
+3009	31	load	a[]
+5004	32	add	j
+500C	33	add	store it
+4036	34	store	doit
+300E	35	load	acc = previous
+0000	36	doit	set correct sort
+3009	37	load	a[]
+5004	38	add	acc = a[] + j
+6003	39	sub	acc = acc - 1
+500C	3A	add	store it
+403D	3B	store	doit
+300A	3C	load	acc = temp
+0000	3D	doit	set correct set
+3004	3E	load	acc = j
+6003	3F	sub	acc = j -1
+4004	40	store	j = acc
+C015	41	jmp	while(j > 1)
+3001	42	load	acc = i
+5003	43	add	acc = i + 1
+4001	44	store	i = acc
+C005	45	jmp	j= size - 1
+304B	45	
+0000	46
+0000	47
+0000	48	
+0000	49	
+0010	4A
+0001	4B
+0020	4C
+0003	4D
+0006	4E

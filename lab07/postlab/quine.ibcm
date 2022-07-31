@@ -1,0 +1,20 @@
+C006	00	jmp
+0001	01	dw	one
+0000	02	dw	i
+3000	03	loadit
+4000	04	storeit
+0012	05	dw	size of program
+3005	06	load	size
+E014	07	jmpl	
+3003	08	load	loadit
+5002	09	add	i
+400B	0A	store	
+0000	0B	do it 
+1800	0C	print
+3002	0D	load	acc = i
+5001	0F	add
+4002	10
+3006	11
+6002	12
+C007	13
+0000	14
